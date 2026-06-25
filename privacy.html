@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Philia Entreprise LLC</title>
+    <meta name="description" content="Privacy Policy for Philia Entreprise LLC. We respect and protect the privacy of our institutional partners and users.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f7f6fc;
+            color: #2d244c;
+            overflow-x: hidden;
+        }
+        .ambient-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: #f7f6fc;
+            pointer-events: none;
+        }
+        .glow-top {
+            position: absolute;
+            top: -25%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 85vh;
+            background: radial-gradient(circle, rgba(57, 255, 20, 0.1) 0%, rgba(57, 255, 20, 0.03) 45%, transparent 75%);
+            filter: blur(65px);
+        }
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(57, 255, 20, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(57, 255, 20, 0.04) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at 50% 30%, black, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at 50% 30%, black, transparent 80%);
+            pointer-events: none;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 
+                0 10px 30px rgba(57, 255, 20, 0.02),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7f6fc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(57, 255, 20, 0.15);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(57, 255, 20, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-[#39FF14]/20 selection:text-[#27B30D]">
+
+    <!-- Background Ambience & Grid -->
+    <div class="ambient-bg">
+        <div class="glow-top"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+        
+        <!-- Header -->
+        <header class="w-full border-b border-indigo-100/50 bg-[#f7f6fc]/55 backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full border-2 border-[#39FF14]/50 flex items-center justify-center font-display font-bold text-sm tracking-tighter text-[#27B30D] shadow-[0_0_10px_rgba(57,255,20,0.2)]">
+                        P
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="index.html" class="font-display font-bold text-base tracking-wider text-[#0f0a3c] uppercase leading-none hover:text-[#27B30D] transition-colors">Philia Entreprise LLC</a>
+                        <span class="text-[9px] text-[#2d244c]/60 tracking-widest font-mono uppercase mt-1">Holding Company</span>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="index.html" class="bg-white/50 border border-[#39FF14]/30 hover:border-[#39FF14]/60 backdrop-blur-sm hover:bg-white/70 text-xs uppercase tracking-widest px-5 py-2.5 rounded-full font-semibold text-[#27B30D] transition-all duration-300">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto px-6 py-16 w-full flex-grow">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl space-y-10">
+                
+                <div>
+                    <h1 class="font-display font-bold text-3xl sm:text-4xl text-[#0f0a3c] tracking-tight">Privacy Policy</h1>
+                    <p class="text-xs font-mono text-[#2d244c]/45 mt-2 uppercase">Last Updated: June 25, 2026</p>
+                </div>
+
+                <div class="prose prose-slate max-w-none text-[#4e4670] space-y-6 leading-relaxed">
+                    <p>
+                        Philia Entreprise LLC ("we," "us," or "our") operates as a technology and asset management holding company. We are committed to protecting the privacy of our institutional partners, clients, and visitors to our corporate website. This Privacy Policy details how we handle information in connection with our institutional operations.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">1. Scope of This Policy</h2>
+                    <p>
+                        This policy applies strictly to the corporate holding entity, Philia Entreprise LLC, and its corporate website <a href="https://philiaentreprisellc.com" class="text-[#27B30D] hover:underline font-semibold">philiaentreprisellc.com</a>. Owned technology products, operating subsidiaries, or real estate assets may maintain separate, dedicated privacy disclosures tailored to their specific consumer operations.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">2. Information We Collect</h2>
+                    <p>
+                        As an institutional holding company, we limit data collection to the absolute minimum necessary for legal compliance and communication:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Inquiry Data:</strong> If you contact us directly via email, we collect your email address, name, organization, and any additional details you voluntarily share.</li>
+                        <li><strong>Technical Logging Data:</strong> Standard server logs are captured automatically by hosting providers to maintain security, analyze broad traffic patterns, and optimize site speed. This includes anonymized IP addresses, browser types, and access timestamps.</li>
+                    </ul>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">3. How We Use Your Information</h2>
+                    <p>
+                        Any information collected is used solely for corporate operations:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>To evaluate and respond to legal, regulatory, or business inquiries.</li>
+                        <li>To secure our digital infrastructure against unauthorized access or cyber threats.</li>
+                        <li>To comply with federal, state, and international regulatory requirements, including Apple Developer compliance.</li>
+                    </ul>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">4. Information Sharing and Disclosure</h2>
+                    <p>
+                        Philia Entreprise LLC does not sell, lease, or share personal details with third-party advertisers or marketing firms. We may disclose collected information only under the following conditions:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>With Subsidiaries and Affiliates:</strong> Information may be shared internally within our corporate group to address specific business opportunities or operational issues.</li>
+                        <li><strong>Legal and Regulatory Compliance:</strong> We will disclose information if required to do so by court order, applicable laws, or official requests from government authorities.</li>
+                    </ul>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">5. Security of Information</h2>
+                    <p>
+                        We use standard administrative, technical, and physical safeguards to defend your corporate information from loss, theft, misuse, and unauthorized modification. Please note, however, that no method of transmission over the internet can be guaranteed as entirely secure.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">6. Data Retention</h2>
+                    <p>
+                        We retain communications and technical server logs only for as long as necessary to address the purpose of collection, verify compliance, or fulfill statutory requirements.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">7. Contact Information</h2>
+                    <p>
+                        If you have questions regarding this Privacy Policy or our data management practices, please contact us at:
+                    </p>
+                    <p class="font-mono text-sm border-l-2 border-[#39FF14] pl-4 text-[#0f0a3c]">
+                        Philia Entreprise LLC<br>
+                        Email: <a href="mailto:contact@philiaentreprisellc.com" class="text-[#27B30D] hover:underline">contact@philiaentreprisellc.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-indigo-100 bg-[#f0edf8]/60">
+            <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 text-xs font-mono text-[#2d244c]/45">
+                <div>
+                    <span class="font-display font-semibold text-[#0f0a3c] uppercase block text-sm mb-1">Philia Entreprise LLC</span>
+                    <span>D-U-N-S® Number: 139505786</span>
+                </div>
+                <div class="flex gap-8">
+                    <a href="index.html" class="hover:text-[#27B30D] transition-colors">Overview</a>
+                    <a href="terms.html" class="hover:text-[#27B30D] transition-colors">Terms of Service</a>
+                </div>
+                <div class="text-[#2d244c]/30">
+                    © 2026 Philia Entreprise LLC. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Philia Entreprise LLC</title>
+    <meta name="description" content="Terms of Service for Philia Entreprise LLC. Read our institutional platform guidelines.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f7f6fc;
+            color: #2d244c;
+            overflow-x: hidden;
+        }
+        .ambient-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: #f7f6fc;
+            pointer-events: none;
+        }
+        .glow-top {
+            position: absolute;
+            top: -25%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 85vh;
+            background: radial-gradient(circle, rgba(57, 255, 20, 0.1) 0%, rgba(57, 255, 20, 0.03) 45%, transparent 75%);
+            filter: blur(65px);
+        }
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(57, 255, 20, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(57, 255, 20, 0.04) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at 50% 30%, black, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at 50% 30%, black, transparent 80%);
+            pointer-events: none;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 
+                0 10px 30px rgba(57, 255, 20, 0.02),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7f6fc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(57, 255, 20, 0.15);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(57, 255, 20, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-[#39FF14]/20 selection:text-[#27B30D]">
+
+    <!-- Background Ambience & Grid -->
+    <div class="ambient-bg">
+        <div class="glow-top"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+        
+        <!-- Header -->
+        <header class="w-full border-b border-indigo-100/50 bg-[#f7f6fc]/55 backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full border-2 border-[#39FF14]/50 flex items-center justify-center font-display font-bold text-sm tracking-tighter text-[#27B30D] shadow-[0_0_10px_rgba(57,255,20,0.2)]">
+                        P
+                    </div>
+                    <div class="flex flex-col">
+                        <a href="index.html" class="font-display font-bold text-base tracking-wider text-[#0f0a3c] uppercase leading-none hover:text-[#27B30D] transition-colors">Philia Entreprise LLC</a>
+                        <span class="text-[9px] text-[#2d244c]/60 tracking-widest font-mono uppercase mt-1">Holding Company</span>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="index.html" class="bg-white/50 border border-[#39FF14]/30 hover:border-[#39FF14]/60 backdrop-blur-sm hover:bg-white/70 text-xs uppercase tracking-widest px-5 py-2.5 rounded-full font-semibold text-[#27B30D] transition-all duration-300">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto px-6 py-16 w-full flex-grow">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl space-y-10">
+                
+                <div>
+                    <h1 class="font-display font-bold text-3xl sm:text-4xl text-[#0f0a3c] tracking-tight">Terms of Service</h1>
+                    <p class="text-xs font-mono text-[#2d244c]/45 mt-2 uppercase">Last Updated: June 25, 2026</p>
+                </div>
+
+                <div class="prose prose-slate max-w-none text-[#4e4670] space-y-6 leading-relaxed">
+                    <p>
+                        Welcome to the institutional website of Philia Entreprise LLC ("Company," "we," "us," or "our"). These Terms of Service ("Terms") govern your access to and use of <a href="https://philiaentreprisellc.com" class="text-[#27B30D] hover:underline font-semibold font-mono">philiaentreprisellc.com</a> (the "Site"). Please read these Terms carefully before using the Site.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">1. Acceptance of Terms</h2>
+                    <p>
+                        By accessing, browsing, or using this Site, you acknowledge that you have read, understood, and agree to be bound by these Terms and to comply with all applicable laws and regulations. If you do not agree to these Terms, you must immediately discontinue your use of this Site.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">2. Scope of Services</h2>
+                    <p>
+                        This Site serves exclusively as an institutional information platform for Philia Entreprise LLC, a parent holding company. The content provided is for informational purposes only. The Site:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Does not offer commercial products or subscriptions directly for purchase.</li>
+                        <li>Does not provide financial, investment, legal, or tax advice.</li>
+                        <li>Does not serve as an direct interface or marketplace for consumer transactions.</li>
+                    </ul>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">3. Intellectual Property Rights</h2>
+                    <p>
+                        All material displayed on this Site, including but not limited to text, graphics, logos, icons, images, layout designs, and software code, is the property of Philia Entreprise LLC or its licensing partners and is protected by United States and international copyright, trademark, and intellectual property laws. You may not reproduce, distribute, modify, or publish any content from this Site without our prior written consent.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">4. Permitted and Prohibited Uses</h2>
+                    <p>
+                        You are granted a limited, non-exclusive, non-transferable license to access the Site for informational purposes. You agree not to:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Use the Site in any way that violates applicable federal, state, local, or international laws.</li>
+                        <li>Engage in unauthorized data extraction, scraping, harvesting, or indexing of the Site's content.</li>
+                        <li>Attempt to interfere with or compromise the proper working, security systems, or digital infrastructure of the Site.</li>
+                        <li>Introduce any viruses, trojan horses, or other malicious software targeting our systems.</li>
+                    </ul>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">5. Disclaimer of Warranties</h2>
+                    <p>
+                        This Site and all its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied, including but not limited to warranties of accuracy, completeness, reliability, or fitness for a particular purpose. Philia Entreprise LLC does not guarantee that the Site will operate uninterrupted or free of errors or vulnerabilities.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">6. Limitation of Liability</h2>
+                    <p>
+                        In no event shall Philia Entreprise LLC, its affiliates, directors, officers, employees, or agents be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use or inability to use this Site, even if advised of the possibility of such damages.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">7. Governing Law and Jurisdiction</h2>
+                    <p>
+                        These Terms and your use of the Site shall be governed by and construed in accordance with the laws of the United States, without giving effect to any choice of law principles. Any legal action or proceeding arising under these Terms shall be subject to the exclusive jurisdiction of the appropriate federal or state courts.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">8. Modifications to Terms</h2>
+                    <p>
+                        We reserve the right to modify these Terms at any time without prior notice. Any updates will be posted to this page with an updated "Last Updated" date. Your continued use of the Site following any changes constitutes acceptance of the new Terms.
+                    </p>
+
+                    <h2 class="font-display font-semibold text-xl text-[#0f0a3c] pt-4">9. Contact Details</h2>
+                    <p>
+                        For any questions or legal inquiries regarding these Terms, please contact:
+                    </p>
+                    <p class="font-mono text-sm border-l-2 border-[#39FF14] pl-4 text-[#0f0a3c]">
+                        Philia Entreprise LLC<br>
+                        Email: <a href="mailto:contact@philiaentreprisellc.com" class="text-[#27B30D] hover:underline">contact@philiaentreprisellc.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-indigo-100 bg-[#f0edf8]/60">
+            <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 text-xs font-mono text-[#2d244c]/45">
+                <div>
+                    <span class="font-display font-semibold text-[#0f0a3c] uppercase block text-sm mb-1">Philia Entreprise LLC</span>
+                    <span>D-U-N-S® Number: 139505786</span>
+                </div>
+                <div class="flex gap-8">
+                    <a href="index.html" class="hover:text-[#27B30D] transition-colors">Overview</a>
+                    <a href="privacy.html" class="hover:text-[#27B30D] transition-colors">Privacy Policy</a>
+                </div>
+                <div class="text-[#2d244c]/30">
+                    © 2026 Philia Entreprise LLC. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philia Entreprise LLC — Technology & Asset Management Holding</title>
+    <meta name="description" content="Philia Entreprise LLC is a premier technology & asset management holding company. We engineer financial systems and manage digital infrastructure assets.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base page style with Dribbble-inspired Light theme + Neon Green accents */
+        body {
+            background-color: #f7f6fc;
+            color: #2d244c;
+            overflow-x: hidden;
+        }
+
+        /* Web3 Neon Green Ambient Background Gradients */
+        .ambient-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: #f7f6fc;
+            pointer-events: none;
+        }
+
+        /* Soft top-centered neon green glow */
+        .glow-top {
+            position: absolute;
+            top: -25%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 85vh;
+            background: radial-gradient(circle, rgba(57, 255, 20, 0.1) 0%, rgba(57, 255, 20, 0.03) 45%, transparent 75%);
+            filter: blur(65px);
+        }
+
+        /* Secondary ambient bottom-right glow */
+        .glow-bottom {
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 60vw;
+            height: 60vh;
+            background: radial-gradient(circle, rgba(102, 252, 241, 0.08) 0%, transparent 70%);
+            filter: blur(80px);
+        }
+
+        /* Grid overlay inspired by tech/structural theme */
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(57, 255, 20, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(57, 255, 20, 0.04) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at 50% 30%, black, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at 50% 30%, black, transparent 80%);
+            pointer-events: none;
+        }
+
+        /* Abstract Web3 glassmorphic shapes in the background */
+        .floating-shape-1 {
+            position: absolute;
+            top: 25%;
+            left: 5%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            pointer-events: none;
+            z-index: 0;
+            box-shadow: 0 10px 40px -10px rgba(57, 255, 20, 0.15);
+            animation: floatSlow 12s ease-in-out infinite;
+        }
+
+        .floating-shape-2 {
+            position: absolute;
+            top: 50%;
+            right: 8%;
+            width: 220px;
+            height: 220px;
+            border-radius: 40px;
+            transform: rotate(25deg);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(6px);
+            pointer-events: none;
+            z-index: 0;
+            box-shadow: 0 10px 40px -10px rgba(57, 255, 20, 0.15);
+            animation: rotateFloat 18s ease-in-out infinite;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        @keyframes rotateFloat {
+            0%, 100% { transform: translateY(0px) rotate(25deg); }
+            50% { transform: translateY(20px) rotate(35deg); }
+        }
+
+        /* High-fidelity frosted-glass cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 
+                0 10px 30px rgba(57, 255, 20, 0.02),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.75);
+            border-color: rgba(57, 255, 20, 0.35);
+            transform: translateY(-4px);
+            box-shadow: 
+                0 15px 40px rgba(57, 255, 20, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7f6fc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(57, 255, 20, 0.15);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(57, 255, 20, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-[#39FF14]/20 selection:text-[#27B30D]">
+
+    <!-- Background Ambience & Grid -->
+    <div class="ambient-bg">
+        <div class="glow-top"></div>
+        <div class="glow-bottom"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Floating UI Shapes for Web3 Vibe -->
+    <div class="floating-shape-1"></div>
+    <div class="floating-shape-2"></div>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+        
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full border-b border-indigo-100/50 bg-[#f7f6fc]/55 backdrop-blur-xl">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <!-- Elegant Abstract Holding Logo -->
+                    <div class="w-8 h-8 rounded-full border-2 border-[#39FF14]/50 flex items-center justify-center font-display font-bold text-sm tracking-tighter text-[#27B30D] shadow-[0_0_10px_rgba(57,255,20,0.2)]">
+                        P
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-base tracking-wider text-[#0f0a3c] uppercase leading-none">Philia Entreprise LLC</span>
+                        <span class="text-[9px] text-[#2d244c]/60 tracking-widest font-mono uppercase mt-1">Holding Company</span>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-[#2d244c]/75">
+                    <a href="#about" class="hover:text-[#27B30D] transition-colors">Overview</a>
+                    <a href="#portfolio" class="hover:text-[#27B30D] transition-colors">Portfolio</a>
+                    <a href="#contact" class="hover:text-[#27B30D] transition-colors">Inquiries</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="#contact" class="bg-[#39FF14] text-[#0f0a3c] hover:bg-[#2eff08] shadow-lg hover:shadow-green-500/25 text-xs uppercase tracking-widest px-5 py-2.5 rounded-full font-semibold transition-all duration-300">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section (Centered Layout) -->
+        <section class="relative pt-24 pb-20 md:pt-36 md:pb-28 px-6 max-w-4xl mx-auto w-full flex flex-col items-center text-center">
+            
+            <!-- Cyberpunk Registry Badge -->
+            <div class="inline-flex items-center space-x-2 border border-[#39FF14]/25 bg-[#39FF14]/5 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-mono text-[#27B30D] tracking-wider uppercase mb-8">
+                <span class="w-2 h-2 rounded-full bg-[#27B30D] animate-pulse shadow-[0_0_8px_#39FF14]"></span>
+                <span>Institutional Registry Active</span>
+            </div>
+            
+            <!-- Centered Main Title -->
+            <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-7xl tracking-tight text-[#0f0a3c] leading-none mb-6">
+                Technology & <br class="hidden sm:inline" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0f0a3c] via-[#27B30D] to-[#39FF14]">Asset Management</span>
+            </h1>
+            
+            <!-- Centered Subtitle -->
+            <p class="text-[#4e4670]/90 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl font-light">
+                Philia Entreprise LLC operates as a parent holding company. We engineer complex financial systems, manage digital infrastructure, and direct a growing portfolio of technology-driven businesses.
+            </p>
+            
+            <!-- Centered CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-16 justify-center w-full max-w-md">
+                <a href="#contact" class="bg-[#39FF14] text-[#0f0a3c] hover:bg-[#2eff08] shadow-xl hover:shadow-green-500/30 px-8 py-4 rounded-full font-semibold text-sm transition-all duration-300">
+                    Corporate Inquiry
+                </a>
+                <a href="#portfolio" class="bg-white/40 border border-[#39FF14]/30 hover:border-[#39FF14]/60 backdrop-blur-sm hover:bg-white/60 px-8 py-4 rounded-full font-semibold text-sm text-[#27B30D] transition-all duration-300">
+                    Explore Portfolio
+                </a>
+            </div>
+            
+            <!-- Meta Specs -->
+            <div class="flex flex-wrap gap-4 font-mono text-xs text-[#2d244c]/65 justify-center">
+                <div class="bg-white/50 border border-indigo-100/80 px-4 py-3 rounded-xl backdrop-blur-sm shadow-sm">
+                    <span class="block text-[#0f0a3c] font-bold mb-1">D-U-N-S REGISTERED</span>
+                    <span>139505786</span>
+                </div>
+                <div class="bg-white/50 border border-indigo-100/80 px-4 py-3 rounded-xl backdrop-blur-sm shadow-sm">
+                    <span class="block text-[#0f0a3c] font-bold mb-1">JURISDICTION</span>
+                    <span>United States (LLC)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Sections -->
+        <main class="max-w-6xl mx-auto px-6 w-full flex-grow space-y-32 pb-24 relative z-10">
+            
+            <!-- About Section -->
+            <section id="about" class="grid grid-cols-1 lg:grid-cols-3 gap-12 pt-12 border-t border-indigo-100">
+                <div>
+                    <h2 class="font-display text-2xl font-bold tracking-wide uppercase text-[#0f0a3c]">Company Overview</h2>
+                    <p class="text-xs text-[#2d244c]/45 font-mono mt-2 uppercase">Core Mandate & Structure</p>
+                </div>
+                <div class="lg:col-span-2 space-y-8">
+                    <p class="text-[#4e4670] text-lg leading-relaxed font-light">
+                        Our organizational blueprint focuses on security, scale, and strategic isolation. As an institutional holding company, Philia Entreprise LLC oversees the legal, structural, and infrastructure requirements for our operating entities while mitigating risk and fostering clean development.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h3 class="font-display font-medium text-[#0f0a3c] mb-2">Systems Engineering</h3>
+                            <p class="text-sm text-[#4e4670]/90 leading-relaxed">
+                                Designing backend frameworks, cloud networks, and specialized security protocols to host corporate data systems and software architecture.
+                            </p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h3 class="font-display font-medium text-[#0f0a3c] mb-2">Asset Allocation</h3>
+                            <p class="text-sm text-[#4e4670]/90 leading-relaxed">
+                                Deploying capital into high-growth digital infrastructure assets, commercial real estate holdings, and hospitality systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="grid grid-cols-1 lg:grid-cols-3 gap-12 pt-12 border-t border-indigo-100">
+                <div>
+                    <h2 class="font-display text-2xl font-bold tracking-wide uppercase text-[#0f0a3c]">Asset Portfolio</h2>
+                    <p class="text-xs text-[#2d244c]/45 font-mono mt-2 uppercase">Owned Entities & Initiatives</p>
+                </div>
+                <div class="lg:col-span-2 space-y-6">
+                    
+                    <!-- Principal Technology Asset -->
+                    <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <h3 class="font-display font-semibold text-xl text-[#0f0a3c]">Philia Vault</h3>
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-100">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse shadow-[0_0_5px_#10B981]"></span>
+                                    Active Entity
+                                </span>
+                            </div>
+                            <p class="text-sm text-[#4e4670]/90 max-w-xl leading-relaxed">
+                                Behavioral engineering software designed to optimize productivity, control cognitive load, and automate complex workflows.
+                            </p>
+                        </div>
+                        <div class="text-xs font-mono text-[#2d244c]/65 border border-indigo-100 px-4 py-2 rounded-xl bg-white/60 self-start md:self-auto">
+                            Asset Type: Technology
+                        </div>
+                    </div>
+
+                    <!-- Future Project 1 -->
+                    <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <h3 class="font-display font-semibold text-xl text-[#0f0a3c]">Philia Immobilier</h3>
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                                    Planning
+                                </span>
+                            </div>
+                            <p class="text-sm text-[#4e4670]/90 max-w-xl leading-relaxed">
+                                Developing real estate acquisitions and luxury property holdings to solidify physical asset support for our digital infrastructure.
+                            </p>
+                        </div>
+                        <div class="text-xs font-mono text-[#2d244c]/65 border border-indigo-100 px-4 py-2 rounded-xl bg-white/60 self-start md:self-auto">
+                            Asset Type: Real Estate
+                        </div>
+                    </div>
+
+                    <!-- Future Project 2 -->
+                    <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <h3 class="font-display font-semibold text-xl text-[#0f0a3c]">Philia Hospitality</h3>
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                                    Planning
+                                </span>
+                            </div>
+                            <p class="text-sm text-[#4e4670]/90 max-w-xl leading-relaxed">
+                                Designing and operating technology-integrated hospitality structures and private corporate spaces.
+                            </p>
+                        </div>
+                        <div class="text-xs font-mono text-[#2d244c]/65 border border-indigo-100 px-4 py-2 rounded-xl bg-white/60 self-start md:self-auto">
+                            Asset Type: Hospitality
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact section -->
+            <section id="contact" class="grid grid-cols-1 lg:grid-cols-3 gap-12 pt-12 border-t border-indigo-100">
+                <div>
+                    <h2 class="font-display text-2xl font-bold tracking-wide uppercase text-[#0f0a3c]">Institutional Inquiries</h2>
+                    <p class="text-xs text-[#2d244c]/45 font-mono mt-2 uppercase">Official Communications</p>
+                </div>
+                <div class="lg:col-span-2 space-y-6">
+                    <p class="text-[#4e4670] leading-relaxed font-light text-base">
+                        For compliance, regulatory, banking, or legal inquiries, please send correspondence to our corporate inbox. All communications are reviewed by our legal team in accordance with holding standards.
+                    </p>
+                    <div class="inline-flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-2">
+                        <a href="mailto:contact@philiaentreprisellc.com" class="inline-flex items-center space-x-3 bg-[#39FF14] text-[#0f0a3c] hover:bg-[#2eff08] shadow-xl hover:shadow-green-500/20 px-6 py-3.5 rounded-full font-semibold text-sm transition-all duration-300">
+                            <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>contact@philiaentreprisellc.com</span>
+                        </a>
+                        <button onclick="navigator.clipboard.writeText('contact@philiaentreprisellc.com'); alert('Email copied to clipboard!');" class="text-xs font-mono text-[#2d244c]/60 hover:text-[#27B30D] hover:border-[#39FF14]/55 transition-all px-5 py-3.5 border border-indigo-100 rounded-full bg-white/40">
+                            Copy Email Address
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-indigo-100 bg-[#f0edf8]/60 relative z-20">
+            <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                <div class="space-y-2">
+                    <span class="font-display font-semibold text-[#0f0a3c] tracking-wide uppercase block text-sm">Philia Entreprise LLC</span>
+                    <span class="text-xs font-mono text-[#2d244c]/45 block">D-U-N-S® Number: 139505786</span>
+                </div>
+                
+                <div class="flex flex-wrap gap-8 text-xs font-mono text-[#2d244c]/45">
+                    <a href="privacy.html" class="hover:text-[#27B30D] transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-[#27B30D] transition-colors">Terms of Service</a>
+                    <a href="mailto:contact@philiaentreprisellc.com" class="hover:text-[#27B30D] transition-colors">contact@philiaentreprisellc.com</a>
+                </div>
+
+                <div class="text-xs font-mono text-[#2d244c]/30">
+                    © 2026 Philia Entreprise LLC. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
